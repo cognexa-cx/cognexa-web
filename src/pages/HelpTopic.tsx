@@ -2,13 +2,27 @@ import SEO from "../components/SEO";
 import FAQAccordion from "../components/FAQAccordion";
 import { helpFaqs } from "../data/faqs";
 
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: helpFaqs.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: answer,
+    },
+  })),
+};
+
 function HelpTopic() {
   return (
     <>
       <SEO
         title="FAQ & Help"
-        description="Find answers to common questions about Cognexa's AI automation products and services."
+        description="Find answers to common questions about Cognexa's AI automation products, pricing, integrations, and support."
         path="/help-topic"
+        structuredData={faqStructuredData}
       />
       <div className="bg-[#0c1b33] py-20 text-center">
         <div className="mx-auto max-w-3xl px-5">

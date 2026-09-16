@@ -13,6 +13,61 @@ const ASSET_IMAGES = {
   cognexaAgent: "src/assets/home/brand-voice.webp",
 };
 
+// Mirrors src/data/faqs.ts's helpFaqs — keep the question/answer text in sync,
+// same caveat as everything else in this file.
+const HELP_FAQS = [
+  {
+    question: "What does Cognexa actually do?",
+    answer:
+      "Cognexa builds AI automation products for businesses: Extracto for invoice data extraction, Vision IQ for camera-based monitoring, Cognexa Agent for real-time voice AI, GateVision for smart number plate recognition, plus analytics and RPA tooling.",
+  },
+  {
+    question: "Do I need new hardware to get started?",
+    answer:
+      "No. Extracto works with your existing invoice inbox or upload folder, and Vision IQ and GateVision work with the cameras you already have, no new hardware required.",
+  },
+  {
+    question: "How long does it take to go live?",
+    answer:
+      "Most teams go live in days, not months. There's no manual setup required, point us at your data source and the relevant product starts working immediately.",
+  },
+  {
+    question: "Can these products integrate with our existing systems?",
+    answer:
+      "Yes. Our products ship with ready-to-use integrations for common accounting, ERP, and procurement systems, and our team can help set up custom integrations where needed.",
+  },
+  {
+    question: "How do I get pricing or a demo?",
+    answer:
+      "Reach out through the contact form or book a demo directly, and our team will walk you through pricing based on your use case and scale.",
+  },
+  {
+    question: "How can I reach the Cognexa team?",
+    answer:
+      "Call us at +91 91 7557 6999 or email support@cognexa.co.in, or use the contact form to reach out and we'll get back to you.",
+  },
+  {
+    question: "What should I include when contacting support?",
+    answer:
+      "A short description of what you were trying to do, what happened instead, and which product it relates to helps us resolve things faster. Screenshots are welcome too.",
+  },
+  {
+    question: "How is my data handled?",
+    answer:
+      "See our Privacy Policy for full details on what we collect and how it's used. In short: we don't sell your data, and it's only used to respond to inquiries and improve our products.",
+  },
+];
+
+const faqPage = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HELP_FAQS.map(({ question, answer }) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
+
 function softwareApp({ name, path, description }) {
   return {
     "@context": "https://schema.org",
@@ -36,13 +91,13 @@ export const routes = [
     path: "/about-us",
     title: "About Us",
     description:
-      "Cognexa leads in industrial solutions, extending beyond RPA to provide seamless IoT, AI, and ML services, empowering clients to move faster in a dynamic digital landscape.",
+      "Cognexa builds industrial AI, IoT, and automation solutions that go beyond RPA, helping businesses move faster in a fast-changing digital landscape.",
   },
   {
     path: "/solution",
     title: "Solutions by Industry",
     description:
-      "IT solutions built for every industry: customer service, employee experience, BFSI, healthcare, utilities, and retail. Explore how Cognexa adapts across industries.",
+      "IT solutions built for every industry: customer service, BFSI, healthcare, utilities, and retail. See how Cognexa adapts to your industry.",
   },
   {
     path: "/case-study",
@@ -60,30 +115,33 @@ export const routes = [
   {
     path: "/terms",
     title: "Terms and Conditions",
-    description: "Terms and conditions for using Cognexa's products and services.",
+    description:
+      "Read the terms and conditions governing your use of Cognexa's website, products, and automation services.",
   },
   {
     path: "/privacy-policy",
     title: "Privacy Policy",
-    description: "How Cognexa collects, uses, and protects your data.",
+    description:
+      "How Cognexa collects, uses, stores, and protects your data, and what rights you have over your personal information.",
   },
   {
     path: "/help-topic",
     title: "FAQ & Help",
     description:
-      "Find answers to common questions about Cognexa's AI automation products and services.",
+      "Find answers to common questions about Cognexa's AI automation products, pricing, integrations, and support.",
+    structuredData: faqPage,
   },
   {
     path: "/vision-iq",
     title: "Vision IQ — AI Computer Vision",
     description:
-      "Turn your existing CCTV cameras into an intelligent AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time.",
+      "Turn existing CCTV cameras into an AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time.",
     image: "/visionhero.webp",
     structuredData: softwareApp({
       name: "Vision IQ",
       path: "/vision-iq",
       description:
-        "Turn your existing CCTV cameras into an intelligent AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time.",
+        "Turn existing CCTV cameras into an AI-powered monitoring system. Vision IQ detects safety risks, security threats, and operational issues in real time.",
     }),
   },
   {
@@ -103,26 +161,26 @@ export const routes = [
     path: "/gate-vision",
     title: "GateVision — Smart Number Plate Recognition",
     description:
-      "Cognexa's GateVision reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
+      "Cognexa's GateVision reads vehicle plates in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
     image: "/gatevision-composite.webp",
     structuredData: softwareApp({
       name: "GateVision",
       path: "/gate-vision",
       description:
-        "Cognexa's GateVision reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
+        "Cognexa's GateVision reads vehicle plates in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
     }),
   },
   {
     path: "/cognexa-agent",
     title: "Cognexa Agent — Real-Time Voice AI",
     description:
-      "A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, runs interviews, and follows up on enquiries, all from one platform.",
+      "A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, and runs interviews, all from one platform.",
     assetImageKey: "cognexaAgent",
     structuredData: softwareApp({
       name: "Cognexa Agent",
       path: "/cognexa-agent",
       description:
-        "A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, runs interviews, and follows up on enquiries, all from one platform.",
+        "A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, and runs interviews, all from one platform.",
     }),
   },
   {

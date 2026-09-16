@@ -195,7 +195,7 @@ function Careers() {
                 <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-5 w-5 text-[#0E8FFB]" strokeWidth={2} />
                 </span>
-                <h4 className="mt-3 font-semibold text-gray-900">{title}</h4>
+                <h3 className="mt-3 font-semibold text-gray-900">{title}</h3>
                 <p className="mt-1 text-sm text-gray-500">{description}</p>
               </Reveal>
             ))}

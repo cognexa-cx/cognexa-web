@@ -147,9 +147,9 @@ function About() {
                         strokeWidth={2}
                       />
                     </span>
-                    <h4 className="mt-3 font-semibold text-gray-900">
+                    <h3 className="mt-3 font-semibold text-gray-900">
                       {title}
-                    </h4>
+                    </h3>
                     <p className="mt-1 text-sm text-gray-500">{description}</p>
                   </Reveal>
                 ))}
@@ -207,7 +207,7 @@ function About() {
                 <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#0E8FFB]/10 transition-transform duration-300 group-hover:scale-110">
                   <Icon className="h-6 w-6 text-[#0E8FFB]" strokeWidth={1.5} />
                 </span>
-                <h4 className="mb-2 font-semibold text-gray-900">{title}</h4>
+                <h3 className="mb-2 font-semibold text-gray-900">{title}</h3>
                 <p className="text-sm leading-relaxed text-gray-500">
                   {description}
                 </p>
