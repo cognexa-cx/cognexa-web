@@ -1,4 +1,4 @@
-export const GA_MEASUREMENT_ID = "G-CFPS4MNW6Y";
+export const GA_MEASUREMENT_ID = "G-D5Q7D676BW";
 export const CONSENT_STORAGE_KEY = "cognexa-cookie-consent";
 
 export type ConsentValue = "granted" | "denied";
