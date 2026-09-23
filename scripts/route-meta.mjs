@@ -2,7 +2,7 @@
 // scripts/prerender.mjs. Keep this in sync with each page's <SEO ... />
 // props in src/pages/*.tsx — the build doesn't verify they match.
 const SITE_NAME = "Cognexa";
-const SITE_URL = "https://www.cognexa.co.in";
+const SITE_URL = "https://cognexa.co.in";
 const DEFAULT_IMAGE = "/home1.webp";
 
 // For pages whose OG image is a bundled asset (import from src/assets/...)

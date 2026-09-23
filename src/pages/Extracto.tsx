@@ -100,12 +100,12 @@ function Extracto() {
           operatingSystem: "Web",
           description:
             "Cognexa's Extracto reads any invoice, PDF, scan, or email attachment and turns it into clean, structured data your accounting systems can act on instantly.",
-          url: "https://www.cognexa.co.in/extracto",
+          url: "https://cognexa.co.in/extracto",
           brand: { "@type": "Brand", name: "Cognexa" },
           offers: {
             "@type": "Offer",
             availability: "https://schema.org/InStock",
-            url: "https://www.cognexa.co.in/contacts",
+            url: "https://cognexa.co.in/contacts",
           },
         }}
       />

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cognexa.co.in/sitemap.xml
+Sitemap: https://cognexa.co.in/sitemap.xml

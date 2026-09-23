@@ -14,7 +14,7 @@ interface SEOProps {
 }
 
 const SITE_NAME = "Cognexa";
-const SITE_URL = "https://www.cognexa.co.in";
+const SITE_URL = "https://cognexa.co.in";
 const DEFAULT_IMAGE = "/home1.webp";
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {

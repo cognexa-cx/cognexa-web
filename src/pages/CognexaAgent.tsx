@@ -105,12 +105,12 @@ function CognexaAgent() {
           operatingSystem: "Web",
           description:
             "A real-time voice AI that generates and qualifies leads, arranges meetings, supports customers, runs interviews, and follows up on enquiries, all from one platform.",
-          url: "https://www.cognexa.co.in/cognexa-agent",
+          url: "https://cognexa.co.in/cognexa-agent",
           brand: { "@type": "Brand", name: "Cognexa" },
           offers: {
             "@type": "Offer",
             availability: "https://schema.org/InStock",
-            url: "https://www.cognexa.co.in/contacts",
+            url: "https://cognexa.co.in/contacts",
           },
         }}
       />

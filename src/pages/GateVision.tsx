@@ -88,12 +88,12 @@ function GateVision() {
           operatingSystem: "Web",
           description:
             "Cognexa's GateVision reads vehicle plates at every gate, lane, and toll point in real time, matches them against watchlists, and automates entry, exit, and access decisions.",
-          url: "https://www.cognexa.co.in/gate-vision",
+          url: "https://cognexa.co.in/gate-vision",
           brand: { "@type": "Brand", name: "Cognexa" },
           offers: {
             "@type": "Offer",
             availability: "https://schema.org/InStock",
-            url: "https://www.cognexa.co.in/contacts",
+            url: "https://cognexa.co.in/contacts",
           },
         }}
       />
