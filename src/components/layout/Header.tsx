@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import cognexaLogo from "../../assets/cognexa-logo-dark.png";
 import NavSlideTabs from "./NavSlideTabs";
-import DrawOutlineButton from "../DrawOutlineButton";
 
 const productLinks = [
   { label: "Vision IQ", to: "/vision-iq" },
@@ -74,16 +73,6 @@ function Header() {
             <nav>
               <NavSlideTabs items={navLinks} />
             </nav>
-
-            <div className="flex shrink-0 items-center gap-3">
-              <DrawOutlineButton
-                href="/contacts"
-                lineClassName="bg-white"
-                className="rounded-md bg-[#0E8FFB] px-5 py-2.5 font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-md"
-              >
-                Book a Demo
-              </DrawOutlineButton>
-            </div>
           </div>
 
           <button
@@ -119,16 +108,6 @@ function Header() {
                 </li>
               ))}
             </ul>
-
-            <div className="mt-8 space-y-3 border-t border-white/10 pt-6">
-              <Link
-                to="/contacts"
-                onClick={() => setMobileOpen(false)}
-                className="block rounded-md bg-[#0E8FFB] px-5 py-2.5 text-center font-semibold text-white"
-              >
-                Book a Demo
-              </Link>
-            </div>
           </div>
         </div>
       )}

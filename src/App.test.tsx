@@ -27,7 +27,7 @@ describe("App", () => {
 
     expect(screen.getByRole("banner")).toBeInTheDocument();
     expect(
-      screen.getAllByRole("link", { name: /book a demo/i }).length,
+      screen.getAllByRole("link", { name: /^home$/i }).length,
     ).toBeGreaterThan(0);
   });
 
